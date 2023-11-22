@@ -5,4 +5,4 @@ def googleSearch(query):
 
     print("Searching...")
 
-    webbrowser.open(search_url)
+    webbrowser.open(search_url) # Opens a new tab

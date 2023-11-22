@@ -37,5 +37,9 @@ def main():
                 print("Okay, thank you.")
                 break
 
+
+
+print("Welcome to Voice Web Search")
+
 main()
 

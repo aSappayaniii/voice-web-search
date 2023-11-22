@@ -3,7 +3,7 @@ import pprint
 
 def getMicrophone():
 
-    microphones = sr.Microphone.list_working_microphones()
+    microphones = sr.Microphone.list_working_microphones() # Creates a dictionary of microphones connected to the computer
 
     if not microphones:
         print("No microphones were found.")
@@ -14,7 +14,7 @@ def getMicrophone():
         print(i, ":", mic)
 
     try:
-        index = int(input("Enter the number of the microphone you want to use (If you don't know, leave blank.): "))
+        index = int(input("Enter the number of the microphone you want to use (If you don't know, leave blank.): ")) #Leaving it blank will utilize the default mic
         return index 
     except ValueError:
         print("Utilizing default microphone.")
@@ -31,7 +31,7 @@ def speechToText(microphone=None):
             audio = recognizer.listen(source)
     else:
         with sr.Microphone() as source:
-            print("Listening:")
+            print("Listening!")
             audio = recognizer.listen(source)
 
     try:
